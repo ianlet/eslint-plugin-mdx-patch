@@ -1,6 +1,7 @@
 {
   "name": "eslint-plugin-mdx-patch",
   "version": "0.1.1",
+  "repostiory": "https://github.com/ianlet/eslint-plugin-mdx-patch",
   "description": "Enforce some rules to patch a couple of issues from the current MDX parser",
   "keywords": [
     "eslint",
@@ -8,7 +9,7 @@
     "eslint-plugin",
     "mdx"
   ],
-  "author": "Ian Letourneau",
+  "author": "Ian Letourneau <letourneau.ian@gmail.com>",
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha tests --recursive"
