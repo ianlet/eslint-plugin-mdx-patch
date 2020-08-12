@@ -1,11 +1,12 @@
 {
   "name": "eslint-plugin-mdx-patch",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Enforce some rules to patch a couple of issues from the current MDX parser",
   "keywords": [
     "eslint",
     "eslintplugin",
-    "eslint-plugin"
+    "eslint-plugin",
+    "mdx"
   ],
   "author": "Ian Letourneau",
   "main": "lib/index.js",
