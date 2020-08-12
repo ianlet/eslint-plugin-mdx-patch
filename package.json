@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-mdx-patch",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Enforce some rules to patch a couple of issues from the current MDX parser",
   "keywords": [
     "eslint",
