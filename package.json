@@ -1,7 +1,10 @@
 {
   "name": "eslint-plugin-mdx-patch",
   "version": "0.1.2",
-  "repostiory": "https://github.com/ianlet/eslint-plugin-mdx-patch",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/ianlet/eslint-plugin-mdx-patch.git"
+  },
   "description": "Enforce some rules to patch a couple of issues from the current MDX parser",
   "keywords": [
     "eslint",
