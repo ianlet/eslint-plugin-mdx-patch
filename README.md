@@ -1,6 +1,6 @@
-# eslint-plugin-mdx-jsx
+# eslint-plugin-mdx-patch
 
-Enforce blank lines in block-level JSX
+Enforce some rules to patch a couple of issues from the current MDX parser
 
 ## Installation
 
@@ -11,42 +11,47 @@ $ npm i eslint --save-dev
 $ yarn add -D eslint
 ```
 
-Next, install `eslint-plugin-mdx-jsx`:
+Next, install `eslint-plugin-mdx-patch`:
 
 ```
-$ npm install eslint-plugin-mdx-jsx --save-dev
-$ yarn add -D eslint-plugin-mdx-jsx
+$ npm install eslint-plugin-mdx-patch --save-dev
+$ yarn add -D eslint-plugin-mdx-patch
 ```
 
 
 ## Usage
 
-Add `mdx-jsx` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+Add `mdx-patch` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
 
-```json
-{
-    "plugins": [
-        "mdx-jsx"
-    ]
-}
+```js
+overrides: [
+  {
+    files: '*.md',
+    plugins: ['mdx-patch'],
+    extends: ['plugin:mdx/recommended'],
+    rules: {
+      'mdx-patch/block-level-blank-lines': 2,
+    },
+  },
+],
 ```
 
+If you use `eslint-plugin-prettier`, make sure to use the correct parser:
 
-Then configure the rules you want to use under the rules section.
-
-```json
-{
-    "rules": {
-        "mdx-jsx/enforce-blank-lines": 2
-    }
-}
+```js
+overrides: [
+  {
+    files: '*.md',
+    plugins: ['mdx-patch'],
+    extends: ['plugin:mdx/recommended'],
+    rules: {
+      'prettier/prettier': [ 'error', { parser: 'mdx' } ],
+      'mdx-patch/block-level-blank-lines': 2,
+    },
+  },
+],
 ```
 
 ## Supported Rules
 
-* `mdx-jsx/enforce-blank-lines`
-
-
-
-
-
+* [mdx-patch/block-level-blank-lines](./docs/rules/block-level-blank-lines.md)

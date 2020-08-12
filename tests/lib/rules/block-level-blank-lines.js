@@ -4,27 +4,18 @@
  */
 "use strict";
 
-//------------------------------------------------------------------------------
-// Requirements
-//------------------------------------------------------------------------------
-
-var rule = require("../../../lib/rules/enforce-blank-lines"),
-
-  RuleTester = require("eslint").RuleTester;
+var rule = require("../../../lib/rules/block-level-blank-lines");
+var RuleTester = require("eslint").RuleTester;
 
 var parserOptions = require("eslint-mdx").DEFAULT_PARSER_OPTIONS;
 var parser = require.resolve("eslint-mdx");
-
-//------------------------------------------------------------------------------
-// Tests
-//------------------------------------------------------------------------------
 
 var errors = [{
   message: "Expected blank lines at the start of block-level JSX"
 }]
 
 var ruleTester = new RuleTester();
-ruleTester.run("enforce-blank-lines", rule, {
+ruleTester.run("block-level-blank-lines", rule, {
   valid: [
     {
       code: "<Note>\n\n# This will be parsed\n\n</Note>",

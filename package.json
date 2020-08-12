@@ -1,7 +1,7 @@
 {
-  "name": "eslint-plugin-mdx-jsx",
+  "name": "eslint-plugin-mdx-patch",
   "version": "0.0.2",
-  "description": "Enforce blank lines in block-level JSX",
+  "description": "Enforce some rules to patch a couple of issues from the current MDX parser",
   "keywords": [
     "eslint",
     "eslintplugin",
