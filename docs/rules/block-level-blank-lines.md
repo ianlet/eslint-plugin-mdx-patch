@@ -19,7 +19,9 @@ Examples of **correct** code for this rule:
 
 ```md
 <Note>
-# This won't be parsed
+
+# This will be parsed
+
 </Note>
 ```
 
